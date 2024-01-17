@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${leagueSpartan.className} light`}>
-      <body className="bg-base">
+      <body className="bg-base flex flex-col lg:flex-row">
         <Sidebar />
-        {children}
+        <div className="flex-1">{children}</div>
       </body>
     </html>
   );

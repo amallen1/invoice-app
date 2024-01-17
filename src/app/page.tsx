@@ -1,11 +1,9 @@
-import InvoiceHeader from "./components/invoices/InvoiceHeader";
-import EmptyInvoicePage from "./invoices/empty-invoice";
+import InvoiceContent from "./components/Invoices/InvoiceContent";
 
 export default function Home() {
   return (
-    <main>
-      <InvoiceHeader />
-      <EmptyInvoicePage />
+    <main className="h-full">
+      <InvoiceContent />
     </main>
   );
 }
