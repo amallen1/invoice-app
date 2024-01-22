@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  html,
   body {
-    height: 100%;
+    height: 100vh;
+  }
+
+  input {
+    @apply border border-inputBorder bg-inputColor text-primary text-sm_variant rounded pl-4 py-4 w-full focus:outline focus-within:outline-lightPurple focus-within:outline-1;
+  }
+
+  .formItem {
+    @apply flex flex-col
+  }
+
+  label {
+    @apply text-formLabel
   }
 }

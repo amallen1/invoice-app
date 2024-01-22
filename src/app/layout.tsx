@@ -13,14 +13,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  invoices,
 }: {
   children: React.ReactNode;
+  invoices: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${leagueSpartan.className} light`}>
-      <body className="bg-base flex flex-col lg:flex-row">
-        <Sidebar />
-        <div className="flex-1">{children}</div>
+      <body className="bg-base">
+        <div className="lg:h-full lg:flex">
+          <Sidebar />
+          <div className="flex-1 relative">{children}</div>
+        </div>
       </body>
     </html>
   );
