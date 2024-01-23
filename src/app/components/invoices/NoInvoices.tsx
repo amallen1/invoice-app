@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const NoInvoices = () => {
   return (
-    <div className="text-center w-full max-w-[241px] m-auto lg:absolute lg:left-[50%] lg:right-[50%] lg:translate-x-[-50%] lg:bottom-[25%]">
+    <div className="text-center max-w-[241px] m-auto">
       <div className="mb-10 lg:mb-16">
         <Image
           src="/illustration-empty.svg"

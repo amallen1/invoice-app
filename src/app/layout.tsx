@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${leagueSpartan.className} light`}>
       <body className="bg-base">
-        <div className="lg:min-h-screen">
+        <div className="">
           <Sidebar />
           <div className="lg:absolute lg:w-[calc(100%-103px)] lg:left-[103px]">
             {children}
-            {/* {modal} */}
+            {modal}
           </div>
         </div>
       </body>
