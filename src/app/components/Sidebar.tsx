@@ -17,7 +17,7 @@ const Sidebar = () => {
     }
   }
   return (
-    <div className="bg-header h-[72px] flex justify-between items-center relative md:h-[80px] lg:h-full lg:w-[103px] lg:flex-col lg:rounded-r-[20px]">
+    <div className="bg-header h-[72px] flex justify-between items-center relative md:h-[80px] lg:fixed lg:h-full lg:w-[103px] lg:flex-col lg:rounded-r-[20px]">
       <Link
         href="/"
         className="bg-purple w-[72px] h-full rounded-r-[20px] flex justify-center relative overflow-hidden md:w-[80px] lg:h-[103px] lg:w-full"

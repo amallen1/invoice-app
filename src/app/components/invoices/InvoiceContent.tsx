@@ -5,7 +5,7 @@ import NoInvoices from "./NoInvoices";
 
 const InvoiceContent = () => {
   return (
-    <div className="pt-8 px-6 h-full lg:px-20 lg:relative">
+    <div className="pt-8 px-6">
       <InvoiceHeader />
       <NoInvoices />
     </div>

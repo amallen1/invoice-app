@@ -96,7 +96,7 @@ const config: Config = {
         secondary: "#888EB0",
         formLabel: "#7E88C3",
         inputBorder: "#DFE3FA",
-        inputColor: "FFFFFF",
+        inputColor: "#FFFFFF",
       },
       dark: {
         base: "#141625",

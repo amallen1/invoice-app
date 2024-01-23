@@ -5,7 +5,7 @@ import Image from "next/image";
 const Button = () => {
   return (
     <Link
-      href="/invoices/new-invoice"
+      href="/create"
       className="bg-purple rounded-3xl p-[6px] text-white font-bold hover:bg-lightPurple flex items-center justify-around"
     >
       <div className="w-8 h-8 bg-white rounded-full flex justify-center items-center">
