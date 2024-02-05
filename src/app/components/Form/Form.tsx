@@ -2,28 +2,28 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div>
+    <div className="">
       <form action="">
-        <div className="px-6">
+        <div className="px-6 md:px-14">
           <p className="text-sm_variant text-purple mb-6">Bill From</p>
           <div className="flex flex-col">
             <div className="mb-6">
               <label htmlFor="">Street Address</label>
-              <input type="text" value={"19 Union Terrace"} />
+              <input type="text" />
             </div>
 
             <div className="flex gap-6 mb-6 flex-wrap">
               <div className="flex-1">
                 <label htmlFor="">City</label>
-                <input type="text" value={"London"} />
+                <input type="text" />
               </div>
               <div className="flex-1">
                 <label htmlFor="">Post Code</label>
-                <input type="text" value={"E1 3EZ"} />
+                <input type="text" />
               </div>
               <div className="w-full md:flex-1">
                 <label htmlFor="">Country</label>
-                <input type="text" value={"United Kingdom"} />
+                <input type="text" />
               </div>
             </div>
           </div>
@@ -32,32 +32,32 @@ const Form = () => {
             <div className="mb-6">
               <p className="text-sm_variant text-purple mb-6">Bill To</p>
               <label htmlFor="">Clients Name</label>
-              <input type="text" value={"Alex Grim"} />
+              <input type="text" />
             </div>
             <div className="mb-6">
               <label htmlFor="" className="">
                 Client Email
               </label>
-              <input type="text" value={"alexgrim@mail.com"} />
+              <input type="text" />
             </div>
             <div className="mb-6">
               <label htmlFor="">Street Address</label>
-              <input type="text" value={"84 Church Way"} />
+              <input type="text" />
             </div>
 
             <div className="flex gap-6 mb-6 flex-wrap">
               <div className="flex-1">
                 <label htmlFor="">City</label>
-                <input type="text" value={"Bradford"} />
+                <input type="text" />
               </div>
               <div className="flex-1">
                 <label htmlFor="">Post Code</label>
-                <input type="text" value={"BD1 9PB"} />
+                <input type="text" />
               </div>
 
               <div className="w-full md:flex-1">
                 <label htmlFor="">Country</label>
-                <input type="text" value={"United Kingdom"} />
+                <input type="text" />
               </div>
             </div>
           </div>
@@ -74,14 +74,15 @@ const Form = () => {
             <label htmlFor="">Project Description</label>
             <input type="text" />
           </div>
-
-          <div>dropshadow</div>
         </div>
 
-        <div className="px-6 py-4 flex justify-between">
-          <button>Discard</button>
-          <button>Save as Draft</button>
-          <button>Save & Send</button>
+        <div className="sticky bottom-0">
+          <div className="h-[64px] bg-gradient-to-t from-black opacity-20"></div>
+          <div className="bg-white dark:bg-base px-6 py-8 flex justify-between rounded-br-[20px]">
+            {/* <button onClick={() => closeModal()}>Discard</button> */}
+            <button>Save as Draft</button>
+            <button>Save & Send</button>
+          </div>
         </div>
       </form>
     </div>
