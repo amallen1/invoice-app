@@ -1,4 +1,5 @@
 import React from "react";
+import FormItem from "./FormItem";
 
 const Form = () => {
   return (
@@ -62,17 +63,25 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="mb-6">
-            <label htmlFor="">Invoice Date</label>
-            <input type="date" />
+          <div className="mb-12">
+            <div className="mb-6">
+              <label htmlFor="">Invoice Date</label>
+              <input type="date" className="pr-4" />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="">Payment Terms</label>
+              <input type="text" />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="">Project Description</label>
+              <input type="text" />
+            </div>
           </div>
-          <div className="mb-6">
-            <label htmlFor="">Payment Terms</label>
-            <input type="text" />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="">Project Description</label>
-            <input type="text" />
+
+          <div>
+            <p className="text-[18px] font-bold text-[#777f98] mb-6">Item List</p>
+            {/* TODO: render list of form items */}
+            <FormItem />
           </div>
         </div>
 

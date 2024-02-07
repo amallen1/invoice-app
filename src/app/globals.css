@@ -16,38 +16,7 @@
   }
 
   label {
-    @apply text-formLabel;
+    @apply text-formLabel text-body;
   }
 
-  dialog {
-    margin: 0;
-    position: relative;
-    z-index: -10;
-  }
-
-  dialog::backdrop {
-    background-color: pink;
-    opacity: 0.5;
-    top: 72px;
-    /* min-height: calc(100vh - 150px); */
-    /* min-height: 100vh; */
-    /* top: 0; */
-    /* min-height: calc(100vh - 72px); */
-    position: relative;
-    z-index: -1;
-    
-  }
-
-  @media screen and (min-width: 768px) {
-    dialog::backdrop {
-      top: 80px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    dialog::backdrop {
-      /* top: 80px; */
-      left: 103px;
-    }
-  }
 }

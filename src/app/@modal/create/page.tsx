@@ -7,7 +7,7 @@ const CreateInvoiceModal = () => {
 
   return (
     <div className="">
-      <Modal />
+      <Modal title={"New Invoice"}/>
       <Overlay />
     </div>
   );
