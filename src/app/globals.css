@@ -7,8 +7,15 @@
     height: 100vh;
   }
 
-  input {
-    @apply border border-inputBorder bg-inputColor text-primary text-sm_variant rounded pl-4 py-4 w-full focus:outline focus-within:outline-lightPurple focus-within:outline-1;
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  .dropdown-container {
+    @apply border border-inputBorder bg-inputColor text-primary text-sm_variant rounded px-4 py-4 w-full focus:outline focus-within:outline-lightPurple focus-within:outline-1;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("/icon-calendar.svg") no-repeat;
   }
 
   .formItem {
@@ -18,5 +25,4 @@
   label {
     @apply text-formLabel text-body;
   }
-
 }
