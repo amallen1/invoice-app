@@ -7,11 +7,9 @@
     height: 100vh;
   }
 
-  input[type="text"],
-  input[type="date"],
-  input[type="number"],
+  input,
   .dropdown-container {
-    @apply border border-inputBorder bg-inputColor text-primary text-sm_variant rounded px-4 py-4 w-full focus:outline focus-within:outline-lightPurple focus-within:outline-1;
+    @apply border border-inputBorder bg-inputColor text-primary text-sm_variant rounded px-4 py-4 mt-2 w-full focus:outline focus-within:outline-lightPurple focus-within:outline-1;
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {

@@ -58,6 +58,14 @@ const config: Config = {
           fontWeight: "700",
         },
       ],
+      error: [
+        "0.625rem",
+        {
+          lineHeight: "0.9375rem",
+          letterSpacing: "-0.21px",
+          fontWeight: "500",
+        },
+      ],
     },
     screens: {
       sm: "375px",
