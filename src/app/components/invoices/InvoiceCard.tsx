@@ -1,18 +1,20 @@
 import React from "react";
 
-const InvoiceCard = () => {
+const InvoiceCard = ({ data }: { data: any }) => {
   return (
-    <div className="bg-invoiceCard rounded-lg p-6 text-primary">
+    <div className="bg-invoiceCard rounded-lg p-6 text-primary mb-6">
       <div className="flex items-center justify-between mb-6">
         <p className="text-sm_variant">
-          <span className="text-mediumBlue">#</span>RT3080
+          <span className="text-mediumBlue">#</span>{data.id}
         </p>
-        <p className="text-body text-gray dark:text-white">Jensen Huang</p>
+        <p className="text-body text-gray dark:text-white">{data.clientName}</p>
       </div>
 
       <div className="flex justify-between">
         <div>
-          <p className="text-body_variant text-invoiceContent mb-2">Due 19 Aug 2021</p>
+          <p className="text-body_variant text-invoiceContent mb-2">
+            Due 19 Aug 2021
+          </p>
           <p className="text-sm">£ 1,800.90</p>
         </div>
 

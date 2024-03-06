@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import FormItem from "./FormItem";
@@ -23,6 +24,7 @@ interface FormValues {
   clientCity: string;
   clientPostCode: string;
   clientCountry: string;
+  id: string;
 }
 
 const FormSchema = Yup.object().shape({
@@ -54,6 +56,19 @@ const InvoiceForm = () => {
     clientCity: "",
     clientPostCode: "",
     clientCountry: "",
+    id: "",
+  };
+
+  // Creates invoice ID ex: RT3060
+  const generateInvoiceID = () => {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charactersLength = characters.length;
+    const MIN = 1000;
+    const MAX = 10000;
+    let index1 = Math.floor(Math.random() * charactersLength);
+    let index2 = Math.floor(Math.random() * charactersLength);
+    let numbers = Math.floor(Math.random() * (MAX - MIN) + MIN);
+    return characters[index1] + characters[index2] + numbers;
   };
 
   return (
@@ -63,8 +78,8 @@ const InvoiceForm = () => {
         validationSchema={FormSchema}
         onSubmit={(values, actions) => {
           console.log({ values, actions });
+          // TODO: add to database
           alert(JSON.stringify(values, null, 2));
-          console.log("hootie hoo");
           actions.setSubmitting(false);
         }}
       >

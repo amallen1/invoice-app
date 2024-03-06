@@ -7,7 +7,7 @@ const InvoiceHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-between pb-[102px] text-primary">
+    <div className="flex justify-between text-primary">
       <div>
         <h1 className="text-md md:text-lg">Invoices</h1>
         <span className="text-body_variant text-secondary">No invoices</span>
