@@ -1,19 +1,38 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Form from "../Form/Form";
 
-const Modal = ({ title }: { title: string }) => {
+const Modal = ({
+  title,
+  modalOpen,
+  setModalOpen,
+}: {
+  title: string;
+  modalOpen: boolean;
+  setModalOpen: Function;
+}) => {
   const router = useRouter();
 
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  });
+
+  const goBack = () => {
+    setModalOpen(!modalOpen);
+    router.back();
+  };
+
   return (
-    <div className="z-20 text-primary max-w-[616px] absolute left-0 top-[72px] md:top-[80px] lg:top-[0px] lg:max-w-[719px] lg:h-screen">
-      {/* px-6 md:px-14 */}
+    <div>
       <div className=" bg-white dark:bg-base h-[calc(100vh_-_72px)] overflow-scroll md:rounded-r-[20px] lg:h-screen">
-        {/* px-6 md:px-14 */}
         <div className="mb-6 pt-8 px-6 md:px-14">
-          <button onClick={() => router.back()} className="relative flex gap-5">
+          <button onClick={goBack} className="relative flex gap-5">
             <Image
               src="/icon-arrow-left.svg"
               width={8}
@@ -26,7 +45,7 @@ const Modal = ({ title }: { title: string }) => {
         </div>
         <div>
           <h1 className="text-md mb-6 px-6 md:px-14">{title}</h1>
-          <Form />
+          <Form modalOpen={modalOpen} setModalOpen={setModalOpen} />
         </div>
       </div>
     </div>

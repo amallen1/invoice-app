@@ -36,7 +36,13 @@ const FormSchema = Yup.object().shape({
   clientEmail: Yup.string().email("Invalid email").required("can't be empty"),
 });
 
-const InvoiceForm = () => {
+const InvoiceForm = ({
+  modalOpen,
+  setModalOpen,
+}: {
+  modalOpen: boolean;
+  setModalOpen: Function;
+}) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -69,6 +75,11 @@ const InvoiceForm = () => {
     let index2 = Math.floor(Math.random() * charactersLength);
     let numbers = Math.floor(Math.random() * (MAX - MIN) + MIN);
     return characters[index1] + characters[index2] + numbers;
+  };
+
+  const goBack = () => {
+    setModalOpen(!modalOpen);
+    router.back();
   };
 
   return (
@@ -383,7 +394,7 @@ const InvoiceForm = () => {
                 {/* If creating a new invoice, Show Discard, Save as Draft, and Save & Send*/}
                 <button
                   type="button"
-                  onClick={() => router.back()}
+                  onClick={goBack}
                   className="text-sm_variant text-mediumBlue dark:text-gray bg-paleGray dark:bg-lighterDarkBlue p-4 rounded-3xl"
                 >
                   Discard
