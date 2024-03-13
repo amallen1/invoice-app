@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${leagueSpartan.className} light`}>
       <body className="bg-base">
-        <div className="">
+        <div>
           <Sidebar />
           <div className="lg:absolute lg:w-[calc(100%-103px)] lg:left-[103px]">
             {children}
